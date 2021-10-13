@@ -111,7 +111,7 @@ function multiplicarArgumentos() {
        // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
     // Escribe tu código aquí:
     var total = 1
-    if (arguments < 1) { return 0 }
+    if (arguments.length < 1) { return 0 }
     for (let i = 0; i < arguments.length; i++) {
         total = total * arguments[i]
     }
@@ -198,15 +198,15 @@ function breakStatement(numero) {
     //Pista: usá el statement 'break'
     // Tu código:
     var nuevoArray = []
-    var nuevoValor = numero
     for (let i = 0; i < 10; i++) {
         if (i === numero) { break }
-        nuevoValor += 2;
-        nuevoArray.push(nuevoValor)
+
+        nuevoArray.push(numero += 2)
+
         if (i === 9) { return nuevoArray }
 
     }
-    return nuevoArray
+    return "Se interrumpió la ejecución"
 }
 
 
