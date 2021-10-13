@@ -57,11 +57,8 @@ function dePalabrasAFrase(palabras) {
     // con espacios entre cada palabra
     // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
     // Tu código:
-    string_palabras = ""
-    for (let i = 0; i < array.length; i++) {
-        string_palabras = string_palabras + " " + palabras[i]
-    }
-    return string_palabras.slice(1)
+
+    return palabras.join(" ")
 
 }
 
@@ -113,7 +110,14 @@ function multiplicarArgumentos() {
     // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
        // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
     // Escribe tu código aquí:
+    var total = 1
+    if (arguments < 1) { return 0 }
+    for (let i = 0; i < arguments.length; i++) {
+        total = total * arguments[i]
+    }
+    return total
 }
+
 
 
 function cuentoElementos(arreglo) {
